@@ -1,0 +1,49 @@
+# Configuration example for LPLmaker.
+# Uncomment the lines below to configure to your liking.
+
+# Global configuration. No need to set if the defaults (shown here) work for you.
+# Set to wherever your retroarch directory is (contains paylists folder, cores folder, etc.), typically in ~/.config/retroarch
+#RetroArchDir="/home/username/.config/retroarch"
+#RomsDir="/home/username/Roms"
+# If you use core updater change this to /home/username/.config/retroarch/cores/
+# This is only needed if you aren't setting the cores to DETECT
+#CoresDir="/usr/lib/libretro"
+# Set to the path of the MAME executable
+#Mame="/usr/games/mame"
+
+# Playlist definitions:
+# Create a named playlist.id, where id can be anything you want (it has no side-effects)
+# and set the configuration parameters under it.
+#
+# Example of how to setup a SNES and NES playlist.
+# Can use "DETECT" instead of corelibs and corename, as well as playlist name if unsure
+#
+# Fields:
+# - RomsDir - The directory, relative to RomsDir, where ROMs for this playlist are located.
+# - CoreLib - The library name for the appropriate core, usually <name>_libretro.so.
+#             Using DETECT will make RetroArch try to detect appropriate cores and let you pick.
+# - CoreName - The name of the core. Use DETECT to let RetroArch adjust it.
+# - PlaylistName - The name of the playlist.
+#                  Will be used as the filename (with .lpl extension) and displayed in the UI.
+# - SupportedExtensions - A list of valid extensions for this playlist.
+# - ScanZips - (Optional) Set to true to look inside zip files for the extensions above.
+#              The core must have support for zipped ROM loading.
+#              Requires the zipinfo command.
+# - QueryMame - (Optional) Set to true to query MAME for the ROM title (only makes sense on arcade ROMs)
+
+#[playlist.snes]
+#RomsDir="SNES"
+#CoreLib="DETECT" # or e.g. "snes9x_libretro.so"
+#CoreName="DETECT" # or e.g. "Snes9x"
+#PlaylistName="Nintendo - Super Nintendo Entertainment System"
+#SupportedExtensions=[ 'smc', 'fig', 'sfc', 'gd3', 'gd7', 'dx2', 'bsx', 'swc' ]
+#ScanZips=true
+
+#[playlist.nes]
+#RomDirs="NES"
+#CoreLibs="DETECT" # or e.g. "nestopia_libretro.so"
+#CoreNames="DETECT" # or e.g. "Nestopia"
+#PlaylistNames="Nintendo - Nintendo Entertainment System"
+#SupportedExtensions="nes"
+#ScanZips=true
+
