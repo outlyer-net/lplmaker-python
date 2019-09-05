@@ -35,10 +35,10 @@ The latter is a better option in most cases, the exception being arcade systems.
 ## About
 
 This is rewrite in Python of the Bash script created by [@jsbursik](https://github.com/jsbursik), which in turn was derived from the script written by u/ShiftyAxel on reddit.
+The aim of this rewrite is to make it portable (i.e. easy to use on Windows).
 
 See <https://github.com/outlyer-net/lplmaker-bash> for my initial Bash fork.
 
 ### Differences to the bash version
 
 - **Note** Playlists' `RomsDir` was `RomDirs` in the Bash version.
-
